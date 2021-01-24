@@ -44,7 +44,17 @@ let findEmployeeByFirstName = function(srcArray, firstName) {
     return rec.firstName === firstName
   })
 }
+let hoursWorkedOnDate = function(soughtDate){
+    let inEvent = this.timeInEvents.find(function(e){
+        return e.date === soughtDate
+    })
 
+    let outEvent = this.timeOutEvents.find(function(e){
+        return e.date === soughtDate
+    })
+
+    return (outEvent.hour - inEvent.hour) / 100
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
