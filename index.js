@@ -39,7 +39,11 @@ let createTimeOutEvent = function(dateStamp){
 
     return this
 }
-
+let findEmployeeByFirstName = function(srcArray, firstName) {
+  return srcArray.find(function(rec){
+    return rec.firstName === firstName
+  })
+}
 
 
 /*
